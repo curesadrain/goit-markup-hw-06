@@ -966,6 +966,7 @@ p {
 
 .custom-checkbox {
   display: inline-flex;
+  flex-shrink: 0;
   left: 0;
   top: 50%;
   width: 16px;
@@ -1147,6 +1148,10 @@ p {
 
   .footer-logo {
     margin-left: 0;
+  }
+
+  .footer-social {
+    margin-bottom: 0;
   }
 
   .footer-social-text {
