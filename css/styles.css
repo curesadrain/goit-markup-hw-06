@@ -204,12 +204,20 @@ p {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg.jpg);
+    url(../images/hero-bg-mob.jpg);
   max-width: 1440px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-bg-mob-2x.jpg");
+  }
 }
 
 .hero .container {
@@ -414,16 +422,14 @@ p {
 }
 
 .portfolio-img {
+  width: 288px;
+  height: 280px;
+  object-fit: cover;
 }
 
 .portfolio-img-box {
   position: relative;
   overflow: hidden;
-}
-
-.portfolio-item:hover .overlay-text,
-.portfolio-item:focus .overlay-text {
-  transform: translateY(0);
 }
 
 .overlay-text {
@@ -868,6 +874,13 @@ p {
 }
 
 /* -----------------------------ADAPTIVE-TAB--------------------------------- */
+@media (max-width: 1157px) {
+  .portfolio-item {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -876,6 +889,20 @@ p {
 
   .hero {
     padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-tab.jpg);
+
+    @media screen and (min-resolution: 2x),
+      (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-bg-tab-2x.jpg");
+    }
   }
 
   .hero-text {
@@ -904,6 +931,11 @@ p {
 
   .portfolio-list {
     row-gap: 72px;
+  }
+
+  .portfolio-img {
+    width: 356px;
+    height: 300px;
   }
 
   .portfolio-item {
@@ -977,6 +1009,19 @@ p {
 
   .hero {
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg.jpg);
+    @media screen and (min-resolution: 2x),
+      (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-bg-2x.jpg");
+    }
   }
 
   .hero-text {
@@ -995,8 +1040,18 @@ p {
     row-gap: 48px;
   }
 
+  .portfolio-img {
+    width: 360px;
+    height: 300px;
+  }
+
   .portfolio-item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .portfolio-item:hover .overlay-text,
+  .portfolio-item:focus .overlay-text {
+    transform: translateY(0);
   }
 
   .footer {
